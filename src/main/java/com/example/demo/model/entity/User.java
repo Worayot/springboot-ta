@@ -14,13 +14,13 @@ public class User {
 
     public User() {}
 
-    public User(String name, String surname, int age) {
+    public User(String id, String name, String surname, int age) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
-    // getters and setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     public String getName() { return name; }
@@ -29,4 +29,9 @@ public class User {
     public void setSurname(String surname) { this.surname = surname; }
     public int getAge() { return age; }
     public void setAge(int age) { this.age = age; }
+
+    @Override
+    public String toString() {
+        return this.getName() + " " + this.getSurname() + "with an Id of " + this.getId() + " in the age of " + this.getAge();
+    }
 }
